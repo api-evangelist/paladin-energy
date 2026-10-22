@@ -1,0 +1,24 @@
+name: Paladin Energy MCP Server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+status: none
+description: >-
+  No MCP server (remote or local) is published or advertised by Paladin Energy, and no OpenAPI contract
+  exists from which to derive a candidate tool list. Paladin Energy is an ASX/TSX-listed uranium producer
+  whose web presence is corporate and investor information only.
+source:
+  - url: https://www.paladinenergy.com/.well-known/mcp.json
+    status: 404
+  - url: https://www.paladinenergy.com/llms.txt
+    status: 404
+  - url: https://paladinenergy.com.au/llms.txt
+    status: 404
+  - search: '"Paladin Energy" uranium MCP server OR API developer'
+    result: no results naming the company (only an unrelated NFT "Uranium" MCP server)
+  - preflight: contract_discovery verdict absent for openapi/asyncapi/graphql/mcp on paladinenergy.com.au, www.paladinenergy.com, api.paladinenergy.com
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+tools: []

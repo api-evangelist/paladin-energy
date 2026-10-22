@@ -1,0 +1,40 @@
+generated: '2026-10-22'
+method: searched
+probe: true
+source: https://www.paladinenergy.com/privacy-policy/
+notes: >-
+  Paladin Energy Ltd (ASX/TSX: PDN) is a uranium miner with no public API product. Its only privacy document is a
+  short website Privacy Statement covering www.paladinenergy.com.au (newsletter sign-up and cookies). It speaks to
+  data retention and, weakly, to correction of personal information. It does not name subprocessors, data residency,
+  incident notification, access/deletion rights, Global Privacy Control, AI or any other catalog signal; those are
+  not recorded. Found via the homepage footer links (privacy-policy, disclaimer, corporate-governance).
+signals:
+  data_retention:
+    url: https://www.paladinenergy.com/privacy-policy/
+    section: Personal Information Storage and Security
+    stated_period: up to seven years
+    evidence:
+    - source: https://www.paladinenergy.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        Personal information is stored in transmission logs and archived for a period of up to seven years,
+        depending on the nature of the information being held.
+    note: >-
+      States one maximum retention period (up to seven years) for personal information collected through the
+      website, varying by the type of information; no per-category schedule or deletion process is given.
+  data_subject_request:
+    url: https://www.paladinenergy.com/privacy-policy/
+    section: Personal Information Quality
+    rights_named: [correction (update of details provided)]
+    evidence:
+    - source: https://www.paladinenergy.com/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: >-
+        When you provide personal information to us via the Internet, we rely on the accuracy of that information.
+        To assist with ensuring accuracy, please contact us if any of the details you have provided change.
+    note: >-
+      The weakest form of this signal: an invitation to contact Paladin to update details you gave it. The page
+      names no rights to access, deletion or portability, and gives no response time, request channel beyond the
+      general contact, or regulator for escalation.

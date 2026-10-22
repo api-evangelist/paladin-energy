@@ -1,23 +1,92 @@
 aid: paladin-energy
+
 name: Paladin Energy
-description: 'Paladin Energy is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Paladin Energy Limited is a global uranium producer listed on the ASX and TSX (PDN) and headquartered in Perth, Western Australia. It operates the Langer Heinrich Mine in Namibia, is developing
+  the Patterson Lake South Project and Michelin Project in Canada (with early-stage exploration in the Athabasca Basin), and holds advanced exploration assets in Queensland and Western Australia, including
+  Mt Isa and Manyingee. Its public website is investor and corporate information; no public developer API is published.
+
 url: https://raw.githubusercontent.com/api-evangelist/paladin-energy/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Energy
+- Mining
+- Uranium
+- Nuclear Energy
+- Australia
+- ASX
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.paladinenergy.com/wp-content/uploads/2025/07/logo1.svg
+
 common:
+- type: Hosts
+  url: hosts/paladin-energy-hosts.yml
+- type: Vendors
+  url: vendors/paladin-energy-vendors.yml
+- type: DomainSecurity
+  url: security/paladin-energy-domain-security.yml
 - type: Website
-  url: https://paladinenergy.com.au/
+  url: https://www.paladinenergy.com/
+- type: Investors
+  url: https://www.paladinenergy.com/investors/
+- type: Newsroom
+  url: https://www.paladinenergy.com/media/
+- type: Leadership
+  url: https://www.paladinenergy.com/about-paladin/leadership/
+- type: Contact
+  url: https://www.paladinenergy.com/contact/
+- type: PrivacyPolicy
+  url: https://www.paladinenergy.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/paladin-energy/
+- type: Twitter
+  url: https://twitter.com/Paladin_Energy
+- type: Facebook
+  url: https://www.facebook.com/PaladinEnergy
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: paladinenergy.com.au redirects (same company) to www.paladinenergy.com, titled "Paladin Energy | Trusted Global Uranium Producer"; logo alt "Paladin Energy Limited". Corporate/investor site only;
+    no developer portal, docs or API found on the site.
+  evidence:
+  - url: https://paladinenergy.com.au/
+    status: 200
+  - url: https://www.paladinenergy.com/
+    status: 200
+  - url: https://www.paladinenergy.com/investors/
+    status: 200
+  - url: https://www.paladinenergy.com/contact/
+    status: 200
+  - url: https://www.paladinenergy.com/media/
+    status: 200
+  - url: https://www.paladinenergy.com/privacy-policy/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

@@ -1,0 +1,16 @@
+name: Paladin Energy packages
+generated: '2026-10-22'
+method: none
+note: Paladin Energy is a uranium producer whose website (https://www.paladinenergy.com/, 200) is investor and corporate information; it publishes no developer API, SDK or CLI. Registry lookups for "paladin-energy" all returned 404 on 2026-10-22.
+checked:
+- url: https://registry.npmjs.org/paladin-energy
+  status: 404
+- url: https://pypi.org/pypi/paladin-energy/json
+  status: 404
+- url: https://rubygems.org/api/v1/gems/paladin-energy.json
+  status: 404
+- url: https://crates.io/api/v1/crates/paladin-energy
+  status: 404
+- url: https://api.github.com/orgs/paladinenergy
+  status: 404
+packages: []
